@@ -1,0 +1,104 @@
+.side {
+    background: red;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+}
+
+.my-image img {
+    height: 207px;
+    /* width: 173px; */
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main {
+    margin-left: 200px;
+    font-size: 20px;
+    padding: 0px 10px;
+    position: fixed;
+    height: 100%;
+}
+
+.nav {
+    flex-direction: column;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    text-align: center;
+    background-image: linear-gradient(120deg,#f6d365 0,#fda085 100%) !important;
+    border: none !important;
+}
+.nav-tabs .nav-link {
+  text-align: center;
+  border-bottom: none !important;
+  border: none !important;
+  animation:  a  8s linear Infinite ;
+}
+.nav-link{
+  color: white;
+  animation:  a  8s linear Infinite ;
+}
+.nav-tabs {
+  border-bottom: none !important;
+}
+@keyframes a {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+.show{
+  animation:  a  8s linear Infinite;
+}
+.nav-link:before {
+ content:"";
+ background: linear-gradient(to   right,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+background-size:400%;
+position: absolute;
+top:-5px;
+right: -5px;
+left: -5px;
+bottom:-5px;
+z-index: -1;
+
+filter: blur(20px);
+opacity: 0;
+transition:0.5s;
+}
+.nav-link:hover:before{
+opacity: 1;
+filter: blur(20px);
+animation:  a  8s linear Infinite;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border: none !important;
+ }
+.main {
+
+}
+ 
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
